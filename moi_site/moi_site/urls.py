@@ -25,4 +25,5 @@ urlpatterns = [
     path('cv/', views.cv, name='cv'),
     path('contacts/', views.contacts, name='contacts'),
     path('my_job/', views.my_job, name='my_job'),
+    path('blog/', include('blog.urls')),
 ]

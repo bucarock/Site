@@ -1,0 +1,11 @@
+{% extends 'base.html'%}
+{% block content %}
+<div class="col-md-8 offset-md-2">
+  <h1>Блог</h1>
+  <hr>
+  {% for post in posts %}
+    <h3>{{post.posts}}</h3>
+    <p>{{post.Category}}</p>
+  {% endfor %}
+</div>
+{% endblock %}
