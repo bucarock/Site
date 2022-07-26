@@ -1,9 +1,10 @@
 from django.shortcuts import render
-from .models import Post, Category
-from .forms import CommentForm
-
+from .models import Task
 
 def blog(request):
-    category = Category.objects.all()
-    return render(request,'blog.html', {'category':'Главная страница', 'post':'category'})
+    task = Task.objects.all()
+    return render(request,'blog.html', {'title': 'Главная страница', 'tasks':'title'})
+
+
+
 
