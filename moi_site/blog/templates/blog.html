@@ -2,6 +2,10 @@
 {% block content %}
 <div class="col-md-8 offset-md-2">
   <h1>Заметки</h1>
+  <a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'create' %}">Создание задачи</a>
+  <a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'create_blog' %}">Создать тему общения</a>
+
+  {% if tasks %}
 
   <hr>{% for el in tasks %}
   <div class="alert alert warning mt-2">
@@ -9,6 +13,8 @@
     <p>{{el.task}}</p>
       {%endfor%}
       </div>
-
+  {% else %}
+      <p>У вас нету записей</p>
+  {% endif %}
   </div>
 {% endblock %}
